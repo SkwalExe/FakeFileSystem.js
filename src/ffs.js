@@ -12,7 +12,6 @@ class FFS {
          */
         this.Errors = {
             NOT_FOUND: "No such file or directory",
-            FILE_EXISTS: "File already exists",
             NOT_A_REGULAR_FILE: "Not a regular file",
             NOT_A_DIRECTORY: "Not a directory",
             FILE_ALREADY_EXISTS: "File or directory already exists",
@@ -22,6 +21,11 @@ class FFS {
         };
         /**
          * This class is returned by most of the FFS functions.
+         * @typedef {Object} Result
+         * @property {String} result.error - The error message.
+         * @property {Boolean} result.success - True if the operation was successful.
+         * @property {any} result.result - The data returned by the operation.
+         * @property {String} result.errorCause - the file that caused the error.
          */
         this.Result = class {
             constructor() {
@@ -87,21 +91,8 @@ class FFS {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         /** this functions returns the informations about a path
-         * @returns {FFS.Result}
+         * @returns {Result}
          *
          * @example
          * let file = FFS.getPath("/hello/test.txt")
@@ -231,7 +222,7 @@ class FFS {
         };
         /** Get the content of a regular file
          * @param {string} path the path to the file
-         * @returns {FFS.Result}
+         * @returns {Result}
          *
          * @example
          * var file = FFS.getFileContent("/test.txt")
@@ -264,7 +255,7 @@ class FFS {
 
         /** Get the content of a directory
          * @param {string} path the path to the directory
-         * @returns {FFS.Result}
+         * @returns {Result}
          *
          * @example
          * var directory = FFS.getDirContent("/myDirectory/")
@@ -298,7 +289,7 @@ class FFS {
          * @param {string} path the path to the file
          * @param {string} content the content to write to the file
          * @param {boolean} append whether to append to the file or not
-         * @returns {FFS.Result} The file object
+         * @returns {Result} The file object
          *
          * @example
          *
@@ -344,7 +335,7 @@ class FFS {
          * @param {string} path the directory to create the file in
          * @param {string} filename the name of the file
          * @param {string} content the content of the file
-         * @returns {FFS.Result}
+         * @returns {Result}
          *
          * @example
          *
@@ -410,7 +401,7 @@ class FFS {
         /** creates a directory
          * @param {string} path the directory to create the directory in
          * @param {string} dirname the name of the directory
-         * @returns {FFS.Result}
+         * @returns {Result}
          *
          * @example
          *
@@ -545,7 +536,7 @@ class FFS {
         /** Deletes a file or directory
          *
          * @param {string} path
-         * @returns {FFS.Result} The deleted file or directory
+         * @returns {Result} The deleted file or directory
          *
          * @example
          *
@@ -588,7 +579,7 @@ class FFS {
 
         /** Get parent directory
          * @param {string} path
-         * @returns {FFS.Result}
+         * @returns {Result}
          *
          * @example
          *
@@ -739,7 +730,7 @@ class FFS {
         /** Copy a file or directory
          * @param {string} source the file to copy
          * @param {string} destination the destination path
-         * @returns {FFS.Result} the copied file or directory
+         * @returns {Result} the copied file or directory
          *
          * @example
          *
@@ -859,7 +850,7 @@ class FFS {
         /** Move a file or directory
          * @param {string} source the file to move
          * @param {string} destination the destination path
-         * @returns {FFS.Result} the moved file or directory
+         * @returns {Result} the moved file or directory
          *
          * @example
          *
