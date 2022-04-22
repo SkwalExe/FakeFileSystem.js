@@ -1,0 +1,26 @@
+{
+  "name": "fakefilesystem",
+  "version": "0.1.0",
+  "description": "library to simulate a simple file system in javascript",
+  "main": "src/ffs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkwalExe/FakeFileSystem.js.git"
+  },
+  "keywords": [
+    "js",
+    "simulation",
+    "filesystem",
+    "ffs",
+    "skwalexe"
+  ],
+  "author": "Léopold Koprivnik Ibghy, @SkwalExe <skwal.net@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SkwalExe/FakeFileSystem.js/issues"
+  },
+  "homepage": "https://github.com/SkwalExe/FakeFileSystem.js#readme"
+}
