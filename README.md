@@ -5,7 +5,7 @@ library to simulate a simple file system in javascript 💾
 # JsDelivr
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/SkwalExe/FakeFileSystem.js@main/src/ffs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/SkwalExe/FakeFileSystem.js@main/dist/ffs.min.js"></script>
 ```
 
 # Usage 📝
@@ -32,25 +32,34 @@ If you have any problem, don't hesitate to open an issue
 
 # Contributing
 
-Start by **forking** this repository.
+1. Start by [**forking** this repository](https://github.com/SkwalExe/FakeFileSystem.js/fork)
 
-![](images/fork.png)
+2. Then clone your fork to your local machine.
+  ```git
+  git clone https://github.com/your-username/FakeFileSystem.js.git
+  ```
 
-Then clone your fork to your local machine.
+3. Create a new branch
+  ```git
+  git checkout -b super-cool-feature
+  ```
 
-```git
-git clone https://github.com/your-username/[repo].git
-```
+4. Then make your changes
 
-Create a new branch
+5. Run tests
+  ```bash
+  npm test
+  ```
 
-```git
-git checkout -b super-cool-feature
-```
+6. Update the changelog and version number if needed
 
-Then make your changes
+7. Update the minified version of the library
+  ```bash
+  npm run build
+  ```
 
-Once you're done, commit your changes and push them to the remote repository.
+
+8. Once you're done, commit your changes and push them to the remote repository.
 
 ```git
 git add --all
@@ -58,6 +67,11 @@ git commit -m "Add super-cool-feature"
 git push origin super-cool-feature
 ```
 
-Then, open a pull request on GitHub from your fork.
+9. Then, open a pull request on GitHub from your fork.
+    1. Go to [this link](https://github.com/SkwalExe/FakeFileSystem.js/compare/)
+    2. Click compare across forks
+    3. On the right, on `head repository` select your fork
+    4. And on `compare` select the branch you just created
+    5. Click on `Create Pull Request` and submit your pull request 
 
 <a href="https://github.com/SkwalExe#ukraine"><img src="https://raw.githubusercontent.com/SkwalExe/SkwalExe/main/ukraine.jpg" width="100%" height="15px" /></a>
