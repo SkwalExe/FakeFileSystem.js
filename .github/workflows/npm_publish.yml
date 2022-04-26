@@ -7,7 +7,7 @@ on:
     paths:
         - 'package.json'
         - 'package-lock.json'
-        - '/src/'
+        - '**.js'
 
 jobs:
   publish:

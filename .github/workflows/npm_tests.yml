@@ -1,6 +1,11 @@
 name: run tests
 
-on: push
+on: 
+  push:
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - '**.js'
 
 jobs:
   test:
