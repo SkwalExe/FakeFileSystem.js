@@ -1,6 +1,6 @@
 {
   "name": "fakefilesystem",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "library to simulate a simple file system in javascript",
   "main": "src/index.js",
   "scripts": {
