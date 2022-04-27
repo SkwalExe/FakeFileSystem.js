@@ -16,7 +16,8 @@ class FFS {
       FILE_ALREADY_EXISTS: 'File or directory already exists',
       SAME_FILE: 'Source and destination are the same',
       INVALID_NAME: 'Invalid file name, must ba at least one character long and cannot contain \\ / : * ? " < > |',
-      ROOT_PROHIBITED: 'You cannot perform this operation on the root directory'
+      ROOT_PROHIBITED: 'You cannot perform this operation on the root directory',
+      NO_FILENAME: 'Missing file or directory name'
     }
     /**
        * This class is returned by most of the FFS functions.
@@ -347,6 +348,13 @@ class FFS {
       // we return the result as a FFS.Result class
       const result = new this.Result()
 
+      if (!filename) {
+        result.error = this.Errors.NO_FILENAME
+        return result
+      }
+
+      path = this.simplifyPath(path)
+
       // check if file name is valid
       if (!this.isValidName(filename)) {
         result.error = this.Errors.INVALID_NAME
@@ -406,6 +414,13 @@ class FFS {
     this.createDir = function (path, dirname) {
       // we return the result as a FFS.Result class
       const result = new this.Result()
+
+      if (!dirname) {
+        result.error = this.Errors.NO_FILENAME
+        return result
+      }
+
+      path = this.simplifyPath(path)
 
       // check if name is valid
       if (!this.isValidName(dirname)) {
