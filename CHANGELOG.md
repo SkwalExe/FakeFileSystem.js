@@ -1,3 +1,7 @@
+# 0.3.1
+- improve error handling
+- fix minor bugs
+
 # 0.3.0
 - Add changeDir() method to change the working directory.
 
