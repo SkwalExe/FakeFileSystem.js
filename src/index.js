@@ -853,9 +853,9 @@ class FFS {
     /** Changes the current working directory
      * @param {string} path the path to the new working directory
      * @returns {Result} the new working directory
-     * 
+     *
      * @example
-     * 
+     *
      * FFS.changeDir("/myDirectory")
      */
     this.changeDir = function (path) {
@@ -882,7 +882,6 @@ class FFS {
       result.result = path
       return result
     }
-
   }
 }
 
