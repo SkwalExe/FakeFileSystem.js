@@ -849,6 +849,40 @@ class FFS {
       result.result = operation.result
       return result
     }
+
+    /** Changes the current working directory
+     * @param {string} path the path to the new working directory
+     * @returns {Result} the new working directory
+     * 
+     * @example
+     * 
+     * FFS.changeDir("/myDirectory")
+     */
+    this.changeDir = function (path) {
+      const result = new this.Result()
+      path = this.simplifyPath(path)
+
+      // check if the path exists
+      if (!this.fileExists(path)) {
+        result.error = this.Errors.NOT_FOUND
+        result.errorCause = path
+        return result
+      }
+
+      // check if the path is a directory
+      if (!this.isDir(path)) {
+        result.error = this.Errors.NOT_A_DIRECTORY
+        result.errorCause = path
+        return result
+      }
+
+      // if the path is valid
+      this.currentDirectory = path
+      result.success = true
+      result.result = path
+      return result
+    }
+
   }
 }
 
