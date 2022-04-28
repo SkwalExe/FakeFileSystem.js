@@ -594,13 +594,20 @@ class FFS {
       path = this.simplifyPath(path)
 
       // remove everything after the last '/'
-      path = path.substring(0, path.lastIndexOf('/'))
+      path = this.getParentPath(path)
 
       if (path === '') { path = '/' }
 
       // if the parent directory does not exist
       if (!this.fileExists(path)) {
         result.error = this.Errors.NOT_FOUND
+        result.errorCause = path
+        return result
+      }
+
+      // check if the parent is a directory
+      if (!this.isDir(path)) {
+        result.error = this.Errors.NOT_A_DIRECTORY
         result.errorCause = path
         return result
       }
@@ -897,6 +904,16 @@ class FFS {
       result.result = path
       return result
     }
+  }
+
+  /** Get the current working directory
+   * @returns {string} the current working directory
+   * @example
+   * FFS.changeDir("/myDirectory")
+   * console.log(FFS.getCurrentDir()) // /myDirectory
+   */
+  CWD () {
+    return this.currentDirectory
   }
 }
 
