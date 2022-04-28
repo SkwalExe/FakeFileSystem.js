@@ -1,3 +1,6 @@
+# 0.4.0
+- add `CWD()` function
+
 # 0.3.1
 - improve error handling
 - fix minor bugs
