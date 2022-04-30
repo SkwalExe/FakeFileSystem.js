@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "unit": "nyc mocha",
-    "lint": "standard",
+    "lint": "standard --fix",
     "build": "browserify --s FFS src/index.js | uglifyjs > dist/ffs.min.js",
     "test": "npm run lint && npm run unit"
   },
