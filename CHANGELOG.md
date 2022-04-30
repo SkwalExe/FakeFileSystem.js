@@ -1,3 +1,6 @@
+# 0.4.1
+- cwd(): simplify path to avoid empty path
+
 # 0.4.0
 - add `CWD()` function
 
