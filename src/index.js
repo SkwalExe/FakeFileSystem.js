@@ -913,21 +913,21 @@ class FFS {
    * console.log(FFS.getCurrentDir()) // /myDirectory
    */
   CWD () {
-    return this.currentDirectory
+    return this.simplifyPath(this.currentDirectory)
   }
 }
 
 if (typeof module !== 'undefined') {
   /**
- * @module FFS
- * @type {FFS}
- * @see {@link https://github.com/SkwalExe/FakeFileSystem.js}
- *
- * @example
- *
- * const FFS = require("ffs")
- *
- * var myFakeFileSystem = new FFS();
- */
+   * @module FFS
+   * @type {FFS}
+   * @see {@link https://github.com/SkwalExe/FakeFileSystem.js}
+   *
+   * @example
+   *
+   * const FFS = require("ffs")
+   *
+   * var myFakeFileSystem = new FFS();
+   */
   module.exports = FFS
 }
