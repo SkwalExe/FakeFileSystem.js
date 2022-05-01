@@ -7,7 +7,7 @@
     "start": "node src/index.js",
     "unit": "nyc mocha",
     "lint": "standard --fix",
-    "build": "browserify --s FFS src/index.js | uglifyjs > dist/ffs.min.js",
+    "build": "browserify --s FFS src/index.js | uglifyjs > dist/ffs.min.js &&",
     "test": "npm run lint && npm run unit"
   },
   "repository": {
@@ -27,18 +27,18 @@
     "url": "https://github.com/SkwalExe/FakeFileSystem.js/issues"
   },
   "homepage": "https://github.com/SkwalExe/FakeFileSystem.js#readme",
-  "dependencies": {
-    "browserify": "^17.0.0",
-    "mocha": "^9.2.2",
-    "nyc": "^15.1.0",
-    "standard": "^17.0.0",
-    "uglify-js": "^3.15.4"
-  },
   "standard": {
     "globals": [
       "describe",
       "it",
       "expect"
     ]
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "mocha": "^9.2.2",
+    "nyc": "^15.1.0",
+    "standard": "^17.0.0",
+    "uglify-js": "^3.15.4"
   }
 }
