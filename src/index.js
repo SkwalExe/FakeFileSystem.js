@@ -3,6 +3,9 @@
 // LICENSE: MIT
 /// /////////////////////
 
+/**
+ * @type Class
+ */
 class FFS {
   constructor () {
     /**
@@ -22,32 +25,16 @@ class FFS {
     /**
        * This class is returned by most of the FFS functions.
        * @typedef {Object} Result
-       * @property {String} result.error - The error message.
-       * @property {Boolean} result.success - True if the operation was successful.
-       * @property {any} result.result - The data returned by the operation.
-       * @property {String} result.errorCause - the file that caused the error.
+       * @property {String} Result.error - The error message.
+       * @property {Boolean} Result.success - True if the operation was successful.
+       * @property {any} Result.result - The data returned by the operation.
+       * @property {String} Result.errorCause - the file that caused the error.
        */
     this.Result = class {
       constructor () {
-        /**
-           * Whether the operation was successful or not
-           * @type {boolean}
-           */
         this.success = false
-        /**
-             * a message describing the error, if any
-             * @type {?string}
-             */
         this.error = null
-        /**
-             * the data returned by the operation, if any
-             * @type {?Object}
-             */
         this.result = null
-        /**
-             * the file or directory that causes the error, if any
-             * @type {?string}
-             */
         this.errorCause = null
       }
     }
