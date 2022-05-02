@@ -39,35 +39,39 @@ If you have any problem, don't hesitate to open an issue
   git clone https://github.com/your-username/FakeFileSystem.js.git
   ```
 
-3. Create a new branch
+3. Install dev dependencies
+  ```bash
+  npm install --save-dev
+  ```
+
+4. Create a new branch
   ```git
   git checkout -b super-cool-feature
   ```
 
-4. Then make your changes
+5. Then make your changes
 
-5. Run tests
+6. Run tests
   ```bash
   npm test
   ```
 
-6. Update the changelog and version number if needed
+7. Update the changelog and version number if needed
 
-7. Update the minified version of the library
+8. Update the minified version of the library
   ```bash
   npm run build
   ```
 
 
-8. Once you're done, commit your changes and push them to the remote repository.
+9. Once you're done, commit your changes and push them to the remote repository.
+  ```git
+  git add --all
+  git commit -m "Add super-cool-feature"
+  git push origin super-cool-feature
+  ```
 
-```git
-git add --all
-git commit -m "Add super-cool-feature"
-git push origin super-cool-feature
-```
-
-9. Then, open a pull request on GitHub from your fork.
+10. Then, open a pull request on GitHub from your fork.
     1. Go to [this link](https://github.com/SkwalExe/FakeFileSystem.js/compare/)
     2. Click compare across forks
     3. On the right, on `head repository` select your fork
