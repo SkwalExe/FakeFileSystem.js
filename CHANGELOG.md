@@ -1,3 +1,6 @@
+# 0.4.2
+- bug fix
+
 # 0.4.1
 - cwd(): simplify path to avoid empty path
 

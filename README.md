@@ -56,15 +56,30 @@ If you have any problem, don't hesitate to open an issue
   npm test
   ```
 
-7. Update the changelog and version number if needed
+7. Update the changelog and version number if needed (using [Semantic Versioning](https://semver.org)) 
+  ```bash
+  # bug fix
+  npm version patch --no-git-tag-version
 
-8. Update the minified version of the library
+  # add a new feature 
+  npm version minor --no-git-tag-version
+  
+  # changes that break backwards compatibility
+  npm version major --no-git-tag-version
+  ```
+
+8. List and correct linting errors
+  ```bash
+  npm run lint
+  ```
+
+9. Update the minified version of the library
   ```bash
   npm run build
   ```
 
 
-9. Once you're done, commit your changes and push them to the remote repository.
+10. Once you're done, commit your changes and push them to the remote repository.
   ```git
   git add --all
   git commit -m "Add super-cool-feature"
