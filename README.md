@@ -5,7 +5,7 @@ library to simulate a simple file system in javascript 💾
 # JsDelivr
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/SkwalExe/FakeFileSystem.js@v0.4.2/dist/ffs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/SkwalExe/FakeFileSystem.js@v0.4.3/dist/ffs.min.js"></script>
 ```
 
 # Usage 📝

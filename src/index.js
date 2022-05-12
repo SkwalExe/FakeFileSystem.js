@@ -307,7 +307,7 @@ class FFS {
         }
       } else {
         // create the file
-        result = this.createFile(path, content)
+        result = this.createFile(this.getParentPath(path), this.basename(path), content)
         return result
       }
     }
