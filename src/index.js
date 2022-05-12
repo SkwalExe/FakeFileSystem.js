@@ -280,7 +280,7 @@ class FFS {
        */
     this.writeFile = function (path, content, append = false) {
       // we return the result as a FFS.Result class
-      const result = new this.Result()
+      let result = new this.Result()
       // check if the file exists
       if (this.fileExists(path)) {
         // if it exists
@@ -307,8 +307,7 @@ class FFS {
         }
       } else {
         // create the file
-        result.success = true
-        result.result = this.createFile(path, content)
+        result = this.createFile(path, content)
         return result
       }
     }
