@@ -1,3 +1,6 @@
+# 0.5.0
+- add toJSON and loadFromJSON methods
+
 # 0.4.3
 - bug fix
 
