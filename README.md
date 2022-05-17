@@ -2,25 +2,33 @@
 
 library to simulate a simple file system in javascript 💾
 
+![](assets/banner.png)
+
 # JsDelivr
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/SkwalExe/FakeFileSystem.js@v0.5.0/dist/ffs.min.js"></script>
 ```
 
-# Usage 📝
+# NPM module
 
-The module can be used in Node.js or [in the browser](#jsdelivr).
+Install the npm module 
 
 ```bash
-npm install --save fakefilesystem
+npm install fakefilesystem
 ```
+
+And import it in your project 
 
 ```js
 const FFS = require('fakefilesystem');
 
-var myFFS = new FFS();
+let myFileSystem = new FFS()
 ```
+
+# Setting up 
+
+You can import the library into you website with [JsDelivr](#JsDelivr) or, you can use the [npm module](#NPM-module) and import it in your project.
 
 # Wiki 📖
 
